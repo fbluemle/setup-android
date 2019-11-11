@@ -1,0 +1,7 @@
+{
+  "name": "setup-android",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Frieder Bluemle <frieder.bluemle@gmail.com>",
+  "main": "index.js"
+}
