@@ -1,0 +1,19 @@
+name: 'Setup Android environment'
+description: 'Installs the Android SDK and other requirements to support Android builds.'
+author: 'Frieder Bluemle'
+branding:
+  icon: 'smartphone'
+  color: 'blue'
+inputs:
+  platform:
+    description: 'API level of the platform'
+    required: true
+  build-tools:
+    description: 'build tools version'
+    default: '29.0.2'
+  script:
+    description: 'custom script to run'
+    default: './gradlew build'
+runs:
+  using: 'node12'
+  main: 'lib/main.js'

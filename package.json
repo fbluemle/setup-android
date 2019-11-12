@@ -1,7 +1,35 @@
 {
   "name": "setup-android",
   "version": "1.0.0",
+  "keywords": [
+    "github",
+    "actions",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbluemle/setup-android.git"
+  },
   "license": "MIT",
   "author": "Frieder Bluemle <frieder.bluemle@gmail.com>",
-  "main": "index.js"
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "@actions/core": "^1.0.0",
+    "@actions/exec": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.7",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.1"
+  }
 }

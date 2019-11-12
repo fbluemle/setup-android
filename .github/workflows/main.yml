@@ -7,7 +7,19 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [29]
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: npm install
+      - name: Lint code
+        run: npm run lint
+      - name: Build project
+        run: npm run build
+      - name: Run action
+        uses: ./
+        with:
+          platform: ${{ matrix.platform }}
+          script: ls -al /usr/local/lib/android/sdk
